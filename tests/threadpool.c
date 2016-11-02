@@ -290,11 +290,11 @@ void * future_get(struct future *f) {
     while (f->futureState != DONE) {
         if (internalExternal != 0 && f->futureState == UNSTARTED) { //Steal it and do it
             // acquire queue lock first
-			pthread_mutex_lock(&f->pool->threads[internalExternal].queueLock);
+			pthread_mutex_lock(&f->pool->threads[internalExternal - 1].queueLock);
        
 	        list_remove(&f->e);
 
-        	pthread_mutex_unlock(&f->pool->threads[internalExternal].queueLock);
+        	pthread_mutex_unlock(&f->pool->threads[internalExternal - 1].queueLock);
 
 	        f->futureState = WORKING;
 	        pthread_mutex_unlock(&f->futureStateLock);
