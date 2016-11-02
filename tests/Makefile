@@ -9,9 +9,9 @@
 # we will use *this* Makefile to run check.py when grading.
 #
 # for benchmarking
-CFLAGS=-Wall -O3 -Werror -Wmissing-prototypes -fopenmp -std=gnu11
+#CFLAGS=-Wall -O3 -Werror -Wmissing-prototypes -fopenmp -std=gnu11
 # for debugging
-#CFLAGS=-Wall -O0 -g -Werror -Wmissing-prototypes -std=gnu11
+CFLAGS=-Wall -O0 -g -Werror -Wmissing-prototypes -std=gnu11
 
 #CXXFLAGS=-Wall -O3 -Werror -fopenmp
 CXXFLAGS=-Wall -g -Werror -fopenmp
