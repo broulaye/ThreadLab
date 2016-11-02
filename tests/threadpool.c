@@ -368,7 +368,7 @@ void * future_get(struct future *f) {
         }
 
 
-        printf("unlocking future\n");
+        //printf("unlocking future\n");
 
         return f->result;
     }
