@@ -45,26 +45,25 @@ struct thread_struct {
 	struct thread_pool *pool;
 };
 
-/**
+
 static void run_future(struct future *f) {
-    pthread_mutex_lock(&futureStateLock);
+    pthread_mutex_lock(&f->futureStateLock);
     f->futureState = WORKING;
     //pthread_cond_signal(&future_cond);
-    pthread_mutex_unlock(&futureStateLock);
+    pthread_mutex_unlock(&f->futureStateLock);
 
     f->result = f->task(f->pool, f->data);
 
-    pthread_mutex_lock(&futureStateLock);
+    pthread_mutex_lock(&f->futureStateLock);
 
     f->futureState = DONE;
-    futureDone = true;
-    printf("future done so signaling\n");
-    pthread_cond_signal(&future_cond);
+    //printf("future done so signaling\n");
+    pthread_cond_broadcast(&f->future_cond);
 
 
-    pthread_mutex_unlock(&futureStateLock);
+    pthread_mutex_unlock(&f->futureStateLock);
 
-}*/
+}
 
 /* Create a new thread pool with no more than n threads. */
 struct thread_pool * thread_pool_new(int nthreads) {
@@ -130,7 +129,8 @@ static void * thread_runner(void *t) {
              //printf("Running future\n");
 
             //run_future(f);
-            f->result = f->task(f->pool, f->data);
+            //f->result = f->task(f->pool, f->data);
+            run_future(f);
 
             pthread_mutex_lock(&f->futureStateLock);
 
@@ -160,8 +160,8 @@ static void * thread_runner(void *t) {
                 pthread_mutex_unlock(&thread->pool->globalQueueLock);
                 pthread_mutex_unlock(&f->futureStateLock);
 
-                //run_future(f);
-                f->result = f->task(f->pool, f->data);
+                run_future(f);
+                //f->result = f->task(f->pool, f->data);
 
                 pthread_mutex_lock(&f->futureStateLock);
 
@@ -286,11 +286,10 @@ struct future * thread_pool_submit(
  * Returns the value returned by this task.
  */
 void * future_get(struct future *f) {
-	/** Planning to put this whole thing in a while loop */
     while (f->futureState != DONE) {
-        if(f->futureState == UNSTARTED){ //Steal it and do it
+        if (internalExternal != 0 && f->futureState == UNSTARTED) { //Steal it and do it
             // acquire queue lock first
-		pthread_mutex_lock(&f->pool->threads[internalExternal].queueLock);
+			pthread_mutex_lock(&f->pool->threads[internalExternal].queueLock);
        
 	        list_remove(&f->e);
 
@@ -301,8 +300,9 @@ void * future_get(struct future *f) {
 	        f->futureState = WORKING;
 	        pthread_mutex_unlock(&f->futureStateLock);
 
-
-	        f->result = f->task(f->pool, f->data);
+	        // should be run_future - need to reimplement?
+	        //f->result = f->task(f->pool, f->data);
+	        run_future(f);
 
 	        pthread_mutex_lock(&f->futureStateLock);
 
@@ -316,24 +316,27 @@ void * future_get(struct future *f) {
 
 	        return f->result;
 	    }
-	    else {//Someone Working on future
-/*        if(internalExternal == 0) {
-            pthread_mutex_unlock(&f->pool->globalQueueLock);
-        }
-        else {
-            pthread_mutex_unlock(&f->pool->threads[internalExternal].queueLock);
-        } */
-	            printf("Still waiting on future\n");
-	            pthread_cond_wait(&f->future_cond, &f->futureStateLock);
-	            printf("Done waiting on future\n");
-            //printf(futureDone);
+	    else if (internalExternal != 0 && f->futureState == WORKING && !list_empty(&f->pool->threads[f->threadRunningF].queue)) {
+	    	// Steal a task to help that thread.
+	    	struct thread_struct * vic = &f->pool->threads[f->threadRunningF];
+	    	pthread_mutex_lock(&vic->queueLock);
+	    	pthread_mutex_unlock(&f->futureStateLock);
+	    	struct list_elem *fe = list_pop_back(&vic->queue);
+	    	struct future *vic_fut = list_entry(fe, struct future, e);
+	    	pthread_mutex_lock(&vic->queueLock);
 
-
-
-        //printf("unlocking future\n");
-
+	    	run_future(vic_fut);
+	    }
+	    else {//Just wait
+	        printf("Still waiting on future\n");
+	        pthread_cond_wait(&f->future_cond, &f->futureStateLock);
+	        printf("Done waiting on future\n");
+            
 	        return f->result;
 	    }
+	}
+
+
 
     return f->result;
 
