@@ -115,7 +115,7 @@ static void * thread_runner(void *t) {
 
         pthread_mutex_unlock(&thread->pool->shutDown_Lock);
 
-
+/*
         pthread_mutex_lock(&thread->queueLock);
         // Continue to work on local queue
         if(!list_empty(&thread->queue)) {
@@ -136,8 +136,8 @@ static void * thread_runner(void *t) {
 
 
         }
-        else  {
-            pthread_mutex_unlock(&thread->queueLock);
+        else  { */
+//            pthread_mutex_unlock(&thread->queueLock);
             pthread_mutex_lock(&thread->pool->globalQueueLock);
             // Take from global queue
             if(!list_empty(&thread->pool->globalQueue)){	
@@ -153,10 +153,10 @@ static void * thread_runner(void *t) {
                 run_future(fut);
                 //f->result = f->task(f->pool, f->data);
 
-            }
+/*            }
             else {
                 pthread_mutex_unlock(&thread->pool->globalQueueLock);
-            }
+            } */
 
         }
 	//printf("trying to lock shutdown again\n");
@@ -268,7 +268,7 @@ struct future * thread_pool_submit(
  * Returns the value returned by this task.
  */
 void * future_get(struct future *f) {
-    pthread_mutex_lock(&f->pool->threads[f->threadRunningF-1].queueLock);
+/*    pthread_mutex_lock(&f->pool->threads[f->threadRunningF-1].queueLock);
 	pthread_mutex_lock(&f->futureStateLock);
     while (f->futureState != DONE) {
         if (internalExternal != 0 && f->futureState == UNSTARTED) { //Steal it and do it
@@ -323,7 +323,27 @@ void * future_get(struct future *f) {
 	pthread_mutex_unlock(&f->pool->threads[f->threadRunningF-1].queueLock);
 	pthread_mutex_unlock(&f->futureStateLock);
     return f->result;
+*/
+	pthread_mutex_lock(&f->pool->threads[f->threadRunningF-1].queueLock);
 
+	pthread_mutex_lock(&f->futureStateLock);
+
+	if (f->futureState == DONE) {
+		pthread_mutex_unlock(&f->futureStateLock);
+		pthread_mutex_unlock(&f->pool->threads[f->threadRunningF-1].queueLock);
+		return f->result;
+	}
+	else if (f->futureState == UNSTARTED) {
+		f->futureState = WORKING;
+		pthread_mutex_unlock(&f->futureStateLock);
+		pthread_mutex_unlock(&f->pool->threads[f->threadRunningF-1].queueLock);
+		run_future(f);
+		return f->result;
+	}
+
+	pthread_mutex_unlock(&f->futureStateLock);
+
+	pthread_mutex_unlock(&f->pool->threads[f->threadRunningF-1].queueLock);
 }
 
 
