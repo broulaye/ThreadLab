@@ -286,6 +286,7 @@ struct future * thread_pool_submit(
  * Returns the value returned by this task.
  */
 void * future_get(struct future *f) {
+	pthread_mutex_lock(&f->futureStateLock);
     while (f->futureState != DONE) {
         if (internalExternal != 0 && f->futureState == UNSTARTED) { //Steal it and do it
             // acquire queue lock first
@@ -295,8 +296,6 @@ void * future_get(struct future *f) {
 
         	pthread_mutex_unlock(&f->pool->threads[internalExternal].queueLock);
 
-
-	        pthread_mutex_lock(&f->futureStateLock);
 	        f->futureState = WORKING;
 	        pthread_mutex_unlock(&f->futureStateLock);
 
@@ -310,9 +309,6 @@ void * future_get(struct future *f) {
         //futureDone = true;
         //printf("future done so signaling\n");
         //pthread_cond_signal(&f->future_cond);
-
-
-	        pthread_mutex_unlock(&f->futureStateLock);
 
 	        return f->result;
 	    }
@@ -337,7 +333,7 @@ void * future_get(struct future *f) {
 	}
 
 
-
+	pthread_mutex_unlock(&f->futureStateLock);
     return f->result;
 
 }
