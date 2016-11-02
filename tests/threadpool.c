@@ -263,7 +263,6 @@ struct future * thread_pool_submit(
  * Returns the value returned by this task.
  */
 void * future_get(struct future *f) {
-	int run_thread = f->threadRunningF-1;
     pthread_mutex_lock(&f->pool->threads[f->threadRunningF-1].queueLock);
 	pthread_mutex_lock(&f->futureStateLock);
     while (f->futureState != DONE) {
@@ -297,8 +296,6 @@ void * future_get(struct future *f) {
 	    	pthread_mutex_unlock(&vic->queueLock);
 
 	    	run_future(vic_fut);
-
-	    	return f->result;
 	    }
 	    else {//Just wait
 	        //printf("Still waiting on future\n");
@@ -307,14 +304,12 @@ void * future_get(struct future *f) {
 		        //printf("Done waiting on future\n");
 	        }
             pthread_mutex_unlock(&f->futureStateLock);
-            pthread_mutex_unlock(&f->pool->threads[f->threadRunningF-1].queueLock)
 	        return f->result;
 	    }
 	}
 
-	// should only reach here if future was already done
+
 	pthread_mutex_unlock(&f->futureStateLock);
-	pthread_mutex_unlock(&f->pool->thread[f->threadRunningF-1].queueLock);
     return f->result;
 
 }
