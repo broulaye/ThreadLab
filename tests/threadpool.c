@@ -47,7 +47,7 @@ struct thread_struct {
 };
 
 
-static void run_future(struct future *f) {
+static inline void run_future(struct future *f) {
     //pthread_mutex_lock(&f->futureStateLock);
     //f->futureState = WORKING;
     //pthread_cond_signal(&future_cond);
@@ -153,6 +153,30 @@ static void * thread_runner(void *t) {
             else {
                 //pthread_mutex_unlock(&list_entry(list_rbegin(&thread->pool->globalQueue),struct future, e)->futureStateLock);
                 pthread_mutex_unlock(&thread->pool->globalQueueLock);
+                /**Stealing Implementation*/
+                for(int i = thread->threadNum-1; i >= 0; i--) {
+
+                    struct thread_struct * vic = &thread->pool->threads[i];
+                    pthread_mutex_lock(&vic->queueLock);
+                    if(!list_empty(&vic->queue)) {
+                        pthread_mutex_lock(&list_entry(list_rbegin(&vic->queue),struct future, e)->futureStateLock);
+                        struct list_elem *elem = list_pop_back(&vic->queue);
+                        struct future *f = list_entry(elem, struct future, e);
+
+                        f->futureState = WORKING;
+                        //pthread_cond_signal(&future_cond);
+
+                        pthread_mutex_unlock(&f->futureStateLock);
+                        pthread_mutex_unlock(&vic->queueLock);
+                        run_future(f);
+                    }
+                    else {
+                        pthread_mutex_unlock(&vic->queueLock);
+                    }
+                }
+
+
+
             }
         }
         pthread_mutex_lock(&thread->pool->shutDown_Lock);
@@ -304,6 +328,8 @@ void * future_get(struct future *f) {
 	}
 	else {
 
+
+
 	    if(f->threadRunningF == 0) {
             pthread_mutex_unlock(&f->pool->globalQueueLock);
         }
@@ -314,7 +340,6 @@ void * future_get(struct future *f) {
             pthread_cond_wait(&f->future_cond, &f->futureStateLock);
         }
         pthread_mutex_unlock(&f->futureStateLock);
-
 
         return f->result;
 	}
