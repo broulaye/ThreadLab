@@ -47,10 +47,10 @@ struct thread_struct {
 
 
 static void run_future(struct future *f) {
-    //pthread_mutex_lock(&f->futureStateLock);
+    pthread_mutex_lock(&f->futureStateLock);
     f->futureState = WORKING;
     //pthread_cond_signal(&future_cond);
-    //pthread_mutex_unlock(&f->futureStateLock);
+    pthread_mutex_unlock(&f->futureStateLock);
 
     f->result = f->task(f->pool, f->data);
 
@@ -131,6 +131,7 @@ static void * thread_runner(void *t) {
 
             //run_future(f);
             //f->result = f->task(f->pool, f->data);
+//TODO: ensure lock safety: futureStateLock is unlocked going in, and we change futureState inside.
             run_future(f);
 
 
@@ -149,6 +150,8 @@ static void * thread_runner(void *t) {
 
                 pthread_mutex_unlock(&f->futureStateLock);
                 pthread_mutex_unlock(&thread->pool->globalQueueLock);
+//TODO: ensure lock safety: futureStateLock is unlocked going in, and we change futureState inside.
+
                 run_future(f);
                 //f->result = f->task(f->pool, f->data);
 
@@ -279,6 +282,8 @@ void * future_get(struct future *f) {
 
 
 	        //f->result = f->task(f->pool, f->data);
+//TODO: ensure lock safety: futureStateLock is unlocked going in, and we change futureState inside.
+
 	        run_future(f);
 
 
@@ -294,6 +299,7 @@ void * future_get(struct future *f) {
 	    	struct future *vic_fut = list_entry(fe, struct future, e);
 
 	    	pthread_mutex_unlock(&vic->queueLock);
+//TODO: ensure lock safety: futureStateLock is unlocked going in, and we change futureState inside.
 
 	    	run_future(vic_fut);
 	    }
