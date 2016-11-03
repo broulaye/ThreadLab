@@ -125,6 +125,7 @@ static void * thread_runner(void *t) {
             struct future *f = list_entry(elem, struct future, e);
 
             f->futureState = WORKING;
+	    f->threadRunningF = internalExternal;
             pthread_mutex_unlock(&f->futureStateLock);
             pthread_mutex_unlock(&thread->queueLock);
             run_future(f);
@@ -142,6 +143,7 @@ static void * thread_runner(void *t) {
                 struct future *f = list_entry(elem, struct future, e);
 
                 f->futureState = WORKING;
+		f->threadRunningF = internalExternal;
                 //pthread_cond_signal(&future_cond);
 
                 pthread_mutex_unlock(&f->futureStateLock);
@@ -164,8 +166,8 @@ static void * thread_runner(void *t) {
                         struct future *f = list_entry(elem, struct future, e);
 
                         f->futureState = WORKING;
+			f->threadRunningF = internalExternal;
                         //pthread_cond_signal(&future_cond);
-
                         pthread_mutex_unlock(&f->futureStateLock);
                         pthread_mutex_unlock(&vic->queueLock);
                         run_future(f);
@@ -240,7 +242,7 @@ struct future * thread_pool_submit(
             f->data = data;
             f->futureState = UNSTARTED;
             f->result = NULL;
-            f->threadRunningF = internalExternal;
+            f->threadRunningF = -1;
             pthread_mutex_init(&f->futureStateLock, NULL);
             pthread_cond_init(&f->future_cond, NULL);
             if(internalExternal == 0) {
@@ -315,7 +317,6 @@ void * future_get(struct future *f) {
         	list_remove(&f->e);
         	f->futureState = WORKING;
         	int temp = f->threadRunningF;
-        	f->threadRunningF = internalExternal;
         	pthread_mutex_unlock(&f->futureStateLock);
         	if(temp == 0) {
             		pthread_mutex_unlock(&f->pool->globalQueueLock);
@@ -332,14 +333,18 @@ void * future_get(struct future *f) {
 			while (f->futureState != DONE) {
 				pthread_cond_wait(&f->future_cond, &f->futureStateLock);
 			}
+			
         	}
        		else {
+printf("internalExternal: %d\n", internalExternal);
+printf("f->threadRunningF: %d\n", f->threadRunningF);
             		//pthread_mutex_unlock(&f->pool->threads[f->threadRunningF-1].queueLock);
 			struct thread_struct * vic = &f->pool->threads[f->threadRunningF-1];
 			if (!list_empty(&vic->queue)) {
 				pthread_mutex_lock(&list_entry(list_rbegin(&vic->queue), struct future, e)->futureStateLock);
 				struct future *vic_fut = list_entry(list_pop_back(&vic->queue), struct future, e);
 				vic_fut->futureState = WORKING;
+				vic_fut->threadRunningF = internalExternal;
 				pthread_mutex_unlock(&vic_fut->futureStateLock);
 				pthread_mutex_unlock(&vic->queueLock);
 				run_future(vic_fut);
