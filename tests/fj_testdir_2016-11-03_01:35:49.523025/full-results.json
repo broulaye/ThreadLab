@@ -1,0 +1,1642 @@
+{
+    "basic1": {
+        "basic test 1": [
+            {
+                "command": "timeout 15 ./threadpool_test -n 1",
+                "cputime": 0.000154,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 0.000131,
+                "ru_stime": 0.000154,
+                "ru_utime": 0.0,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test -n 1",
+                        "nthreads": 1,
+                        "realtime": 0.000131,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 1,
+                        "ru_stime": 0.000154,
+                        "ru_utime": 0.0,
+                        "stdout": "Test successful.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./threadpool_test -n 2",
+                "cputime": 0.000206,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 0.000114,
+                "ru_stime": 0.000206,
+                "ru_utime": 0.0,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test -n 2",
+                        "nthreads": 2,
+                        "realtime": 0.000114,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 2,
+                        "ru_stime": 0.000206,
+                        "ru_utime": 0.0,
+                        "stdout": "Test successful.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./threadpool_test -n 4",
+                "cputime": 0.000466,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 0.000143,
+                "ru_stime": 0.000466,
+                "ru_utime": 0.0,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test -n 4",
+                        "nthreads": 4,
+                        "realtime": 0.000143,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 1,
+                        "ru_stime": 0.000466,
+                        "ru_utime": 0.0,
+                        "stdout": "Test successful.\n"
+                    }
+                ]
+            }
+        ]
+    },
+    "basic2": {
+        "basic test 2": [
+            {
+                "command": "timeout 15 ./threadpool_test2 -n 1",
+                "cputime": 0.000422,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 0.000228,
+                "ru_stime": 0.000422,
+                "ru_utime": 0.0,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test2 -n 1",
+                        "nthreads": 1,
+                        "realtime": 0.000228,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 3,
+                        "ru_stime": 0.000422,
+                        "ru_utime": 0.0,
+                        "stdout": "Test successful.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./threadpool_test2 -n 2",
+                "cputime": 0.001081,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 0.000445,
+                "ru_stime": 0.001081,
+                "ru_utime": 0.0,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test2 -n 2",
+                        "nthreads": 2,
+                        "realtime": 0.000445,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 45,
+                        "ru_stime": 0.001081,
+                        "ru_utime": 0.0,
+                        "stdout": "Test successful.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./threadpool_test2 -n 4",
+                "cputime": 0.003958,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 0.000965,
+                "ru_stime": 0.002826,
+                "ru_utime": 0.001132,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test2 -n 4",
+                        "nthreads": 4,
+                        "realtime": 0.000965,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 223,
+                        "ru_stime": 0.002826,
+                        "ru_utime": 0.001132,
+                        "stdout": "Test successful.\n"
+                    }
+                ]
+            }
+        ]
+    },
+    "basic3": {
+        "basic test 3": [
+            {
+                "command": "timeout 15 ./threadpool_test3 -n 1",
+                "cputime": 0.000106,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 7.5e-05,
+                "ru_stime": 0.000106,
+                "ru_utime": 0.0,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test3 -n 1",
+                        "nthreads": 1,
+                        "realtime": 7.5e-05,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 1,
+                        "ru_stime": 0.000106,
+                        "ru_utime": 0.0,
+                        "stdout": "Test successful.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./threadpool_test3 -n 2",
+                "cputime": 0.000189,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 0.000101,
+                "ru_stime": 0.000189,
+                "ru_utime": 0.0,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test3 -n 2",
+                        "nthreads": 2,
+                        "realtime": 0.000101,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 1,
+                        "ru_stime": 0.000189,
+                        "ru_utime": 0.0,
+                        "stdout": "Test successful.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./threadpool_test3 -n 4",
+                "cputime": 0.000421,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 0.000145,
+                "ru_stime": 0.0,
+                "ru_utime": 0.000421,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test3 -n 4",
+                        "nthreads": 4,
+                        "realtime": 0.000145,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 7,
+                        "ru_stime": 0.0,
+                        "ru_utime": 0.000421,
+                        "stdout": "Test successful.\n"
+                    }
+                ]
+            }
+        ]
+    },
+    "basic4": {
+        "basic test 4": [
+            {
+                "command": "timeout 15 ./threadpool_test4 -n 2",
+                "cputime": 0.003578,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 1.002017,
+                "ru_stime": 0.0,
+                "ru_utime": 0.003578,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test4 -n 2",
+                        "nthreads": 2,
+                        "realtime": 1.002017,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 83,
+                        "ru_stime": 0.0,
+                        "ru_utime": 0.003578,
+                        "stdout": "starting 40 tasks...\nTest successful.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./threadpool_test4 -n 4",
+                "cputime": 0.002083,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 0.501448,
+                "ru_stime": 0.001213,
+                "ru_utime": 0.00087,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test4 -n 4",
+                        "nthreads": 4,
+                        "realtime": 0.501448,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 77,
+                        "ru_stime": 0.001213,
+                        "ru_utime": 0.00087,
+                        "stdout": "starting 40 tasks...\nTest successful.\n"
+                    }
+                ]
+            }
+        ]
+    },
+    "basic5": {
+        "basic test 5": [
+            {
+                "command": "timeout 15 ./threadpool_test5 -n 2",
+                "cputime": 0.36055899999999996,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 0.200236,
+                "ru_stime": 0.141973,
+                "ru_utime": 0.218586,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test5 -n 2",
+                        "nthreads": 2,
+                        "realtime": 0.200236,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 12276,
+                        "ru_stime": 0.141973,
+                        "ru_utime": 0.218586,
+                        "stdout": "starting 40 tasks...\nTest successful.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./threadpool_test5 -n 4",
+                "cputime": 0.69801,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 0.200413,
+                "ru_stime": 0.361563,
+                "ru_utime": 0.336447,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./threadpool_test5 -n 4",
+                        "nthreads": 4,
+                        "realtime": 0.200413,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 43273,
+                        "ru_stime": 0.361563,
+                        "ru_utime": 0.336447,
+                        "stdout": "starting 40 tasks...\nTest successful.\n"
+                    }
+                ]
+            }
+        ]
+    },
+    "fibonacci": {
+        "fibonacci 30": [
+            {
+                "command": "timeout 60 ./fib_test -n 1 30",
+                "cputime": 0.428125,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 0.218964,
+                "ru_stime": 0.000691,
+                "ru_utime": 0.427434,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./fib_test -n 1 30",
+                        "nthreads": 1,
+                        "realtime": 0.218964,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 1,
+                        "ru_stime": 0.000691,
+                        "ru_utime": 0.427434,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./fib_test -n 2 30",
+                "cputime": 2.54611,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 1.271714,
+                "ru_stime": 0.0,
+                "ru_utime": 2.54611,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./fib_test -n 2 30",
+                        "nthreads": 2,
+                        "realtime": 1.271714,
+                        "ru_nivcsw": 2,
+                        "ru_nvcsw": 5,
+                        "ru_stime": 0.0,
+                        "ru_utime": 2.54611,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./fib_test -n 4 30",
+                "cputime": 1.9155060000000002,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 0.532696,
+                "ru_stime": 0.590839,
+                "ru_utime": 1.324667,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./fib_test -n 4 30",
+                        "nthreads": 4,
+                        "realtime": 0.532696,
+                        "ru_nivcsw": 4,
+                        "ru_nvcsw": 93796,
+                        "ru_stime": 0.590839,
+                        "ru_utime": 1.324667,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./fib_test -n 8 30",
+                "cputime": 2.289854,
+                "nthreads": 8,
+                "passed": 1,
+                "realtime": 0.321322,
+                "ru_stime": 1.340249,
+                "ru_utime": 0.949605,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./fib_test -n 8 30",
+                        "nthreads": 8,
+                        "realtime": 0.321322,
+                        "ru_nivcsw": 1,
+                        "ru_nvcsw": 114390,
+                        "ru_stime": 1.340249,
+                        "ru_utime": 0.949605,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./fib_test -n 16 30",
+                "cputime": 5.384663,
+                "nthreads": 16,
+                "passed": 1,
+                "realtime": 0.352326,
+                "ru_stime": 4.434657,
+                "ru_utime": 0.950006,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./fib_test -n 16 30",
+                        "nthreads": 16,
+                        "realtime": 0.352326,
+                        "ru_nivcsw": 3,
+                        "ru_nvcsw": 98944,
+                        "ru_stime": 4.434657,
+                        "ru_utime": 0.950006,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            }
+        ],
+        "fibonacci 38": [
+            {
+                "command": "timeout 60 ./fib_test -n 1 38",
+                "cputime": 18.933661,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 9.460942,
+                "ru_stime": 0.0,
+                "ru_utime": 18.933661,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./fib_test -n 1 38",
+                        "nthreads": 1,
+                        "realtime": 9.460942,
+                        "ru_nivcsw": 10,
+                        "ru_nvcsw": 1,
+                        "ru_stime": 0.0,
+                        "ru_utime": 18.933661,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./fib_test -n 2 38",
+                "cputime": 41.802434,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 16.62577,
+                "ru_stime": 0.000363,
+                "ru_utime": 41.802071,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./fib_test -n 2 38",
+                        "nthreads": 2,
+                        "realtime": 16.62577,
+                        "ru_nivcsw": 20,
+                        "ru_nvcsw": 9,
+                        "ru_stime": 0.000363,
+                        "ru_utime": 41.802071,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./fib_test -n 4 38",
+                "cputime": 93.747346,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 24.611068,
+                "ru_stime": 26.916754,
+                "ru_utime": 66.830592,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./fib_test -n 4 38",
+                        "nthreads": 4,
+                        "realtime": 24.611068,
+                        "ru_nivcsw": 45,
+                        "ru_nvcsw": 4319013,
+                        "ru_stime": 26.916754,
+                        "ru_utime": 66.830592,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            }
+        ]
+    },
+    "mergesort": {
+        "mergesort large": [
+            {
+                "command": "timeout 60 ./mergesort -n 5 -s 43 200000000",
+                "cputime": 114.916248,
+                "nthreads": 5,
+                "passed": 1,
+                "realtime": 23.629362,
+                "ru_stime": 33.117504,
+                "ru_utime": 81.798744,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./mergesort -n 5 -s 43 200000000",
+                        "nthreads": 5,
+                        "realtime": 23.629362,
+                        "ru_nivcsw": 80,
+                        "ru_nvcsw": 3834173,
+                        "ru_stime": 33.117504,
+                        "ru_utime": 81.798744,
+                        "stdout": "Using 5 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 81.798744s\nsystem time: 33.117504s\nreal time: 23.629362s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./mergesort -n 10 -s 43 200000000",
+                "cputime": 244.97591,
+                "nthreads": 10,
+                "passed": 1,
+                "realtime": 26.091914,
+                "ru_stime": 149.822886,
+                "ru_utime": 95.153024,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./mergesort -n 10 -s 43 200000000",
+                        "nthreads": 10,
+                        "realtime": 26.091914,
+                        "ru_nivcsw": 118,
+                        "ru_nvcsw": 7736221,
+                        "ru_stime": 149.822886,
+                        "ru_utime": 95.153024,
+                        "stdout": "Using 10 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 95.153024s\nsystem time: 149.822886s\nreal time: 26.091914s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./mergesort -n 20 -s 43 200000000",
+                "cputime": 516.769605,
+                "nthreads": 20,
+                "passed": 1,
+                "realtime": 26.404359,
+                "ru_stime": 422.911882,
+                "ru_utime": 93.857723,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./mergesort -n 20 -s 43 200000000",
+                        "nthreads": 20,
+                        "realtime": 26.404359,
+                        "ru_nivcsw": 270,
+                        "ru_nvcsw": 6140362,
+                        "ru_stime": 422.911882,
+                        "ru_utime": 93.857723,
+                        "stdout": "Using 20 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 93.857723s\nsystem time: 422.911882s\nreal time: 26.404359s\n"
+                    }
+                ]
+            }
+        ],
+        "mergesort medium": [
+            {
+                "command": "timeout 15 ./mergesort -n 1 -s 43 20000000",
+                "cputime": 4.258342,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 2.155085,
+                "ru_stime": 0.024089,
+                "ru_utime": 4.234253,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./mergesort -n 1 -s 43 20000000",
+                        "nthreads": 1,
+                        "realtime": 2.155085,
+                        "ru_nivcsw": 6,
+                        "ru_nvcsw": 4,
+                        "ru_stime": 0.024089,
+                        "ru_utime": 4.234253,
+                        "stdout": "Using 1 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 4.234253s\nsystem time: 0.024089s\nreal time: 2.155085s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./mergesort -n 2 -s 43 20000000",
+                "cputime": 5.345368,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 2.090991,
+                "ru_stime": 0.143712,
+                "ru_utime": 5.201656,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./mergesort -n 2 -s 43 20000000",
+                        "nthreads": 2,
+                        "realtime": 2.090991,
+                        "ru_nivcsw": 8,
+                        "ru_nvcsw": 17027,
+                        "ru_stime": 0.143712,
+                        "ru_utime": 5.201656,
+                        "stdout": "Using 2 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 5.201656s\nsystem time: 0.143712s\nreal time: 2.090991s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./mergesort -n 4 -s 43 20000000",
+                "cputime": 8.62888,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 2.144225,
+                "ru_stime": 1.762049,
+                "ru_utime": 6.866831,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./mergesort -n 4 -s 43 20000000",
+                        "nthreads": 4,
+                        "realtime": 2.144225,
+                        "ru_nivcsw": 8,
+                        "ru_nvcsw": 222434,
+                        "ru_stime": 1.762049,
+                        "ru_utime": 6.866831,
+                        "stdout": "Using 4 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 6.866831s\nsystem time: 1.762049s\nreal time: 2.144225s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./mergesort -n 8 -s 43 20000000",
+                "cputime": 16.979256,
+                "nthreads": 8,
+                "passed": 1,
+                "realtime": 2.291898,
+                "ru_stime": 8.514196,
+                "ru_utime": 8.46506,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./mergesort -n 8 -s 43 20000000",
+                        "nthreads": 8,
+                        "realtime": 2.291898,
+                        "ru_nivcsw": 10,
+                        "ru_nvcsw": 699177,
+                        "ru_stime": 8.514196,
+                        "ru_utime": 8.46506,
+                        "stdout": "Using 8 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 8.465060s\nsystem time: 8.514196s\nreal time: 2.291898s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./mergesort -n 16 -s 43 20000000",
+                "cputime": 35.761899,
+                "nthreads": 16,
+                "passed": 1,
+                "realtime": 2.305566,
+                "ru_stime": 27.261588,
+                "ru_utime": 8.500311,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./mergesort -n 16 -s 43 20000000",
+                        "nthreads": 16,
+                        "realtime": 2.305566,
+                        "ru_nivcsw": 44,
+                        "ru_nvcsw": 586623,
+                        "ru_stime": 27.261588,
+                        "ru_utime": 8.500311,
+                        "stdout": "Using 16 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 8.500311s\nsystem time: 27.261588s\nreal time: 2.305566s\n"
+                    }
+                ]
+            }
+        ],
+        "mergesort small": [
+            {
+                "command": "timeout 15 ./mergesort -n 1 -s 43 2000000",
+                "cputime": 0.36558999999999997,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 0.182836,
+                "ru_stime": 0.001978,
+                "ru_utime": 0.363612,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./mergesort -n 1 -s 43 2000000",
+                        "nthreads": 1,
+                        "realtime": 0.182836,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 6,
+                        "ru_stime": 0.001978,
+                        "ru_utime": 0.363612,
+                        "stdout": "Using 1 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 0.363612s\nsystem time: 0.001978s\nreal time: 0.182836s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./mergesort -n 2 -s 43 2000000",
+                "cputime": 0.464147,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 0.180865,
+                "ru_stime": 0.015086,
+                "ru_utime": 0.449061,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./mergesort -n 2 -s 43 2000000",
+                        "nthreads": 2,
+                        "realtime": 0.180865,
+                        "ru_nivcsw": 3,
+                        "ru_nvcsw": 1440,
+                        "ru_stime": 0.015086,
+                        "ru_utime": 0.449061,
+                        "stdout": "Using 2 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 0.449061s\nsystem time: 0.015086s\nreal time: 0.180865s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./mergesort -n 4 -s 43 2000000",
+                "cputime": 0.713065,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 0.178325,
+                "ru_stime": 0.136184,
+                "ru_utime": 0.576881,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./mergesort -n 4 -s 43 2000000",
+                        "nthreads": 4,
+                        "realtime": 0.178325,
+                        "ru_nivcsw": 3,
+                        "ru_nvcsw": 20170,
+                        "ru_stime": 0.136184,
+                        "ru_utime": 0.576881,
+                        "stdout": "Using 4 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 0.576881s\nsystem time: 0.136184s\nreal time: 0.178325s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./mergesort -n 8 -s 43 2000000",
+                "cputime": 1.454208,
+                "nthreads": 8,
+                "passed": 1,
+                "realtime": 0.196241,
+                "ru_stime": 0.710628,
+                "ru_utime": 0.74358,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./mergesort -n 8 -s 43 2000000",
+                        "nthreads": 8,
+                        "realtime": 0.196241,
+                        "ru_nivcsw": 2,
+                        "ru_nvcsw": 59659,
+                        "ru_stime": 0.710628,
+                        "ru_utime": 0.74358,
+                        "stdout": "Using 8 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 0.743580s\nsystem time: 0.710628s\nreal time: 0.196241s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./mergesort -n 16 -s 43 2000000",
+                "cputime": 3.1991319999999996,
+                "nthreads": 16,
+                "passed": 1,
+                "realtime": 0.206268,
+                "ru_stime": 2.400502,
+                "ru_utime": 0.79863,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./mergesort -n 16 -s 43 2000000",
+                        "nthreads": 16,
+                        "realtime": 0.206268,
+                        "ru_nivcsw": 4,
+                        "ru_nvcsw": 52227,
+                        "ru_stime": 2.400502,
+                        "ru_utime": 0.79863,
+                        "stdout": "Using 16 threads, parallel/serials threshold=1000 insertion sort threshold=16\nmergesort parallel result ok. Timings follow\nuser time: 0.798630s\nsystem time: 2.400502s\nreal time: 0.206268s\n"
+                    }
+                ]
+            }
+        ]
+    },
+    "nqueens": {
+        "nqueens 11": [
+            {
+                "command": "timeout 15 ./nqueens -n 1 11",
+                "cputime": 2.325417,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 2.134153,
+                "ru_stime": 0.0,
+                "ru_utime": 2.325417,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./nqueens -n 1 11",
+                        "nthreads": 1,
+                        "realtime": 2.134153,
+                        "ru_nivcsw": 3,
+                        "ru_nvcsw": 9,
+                        "ru_stime": 0.0,
+                        "ru_utime": 2.325417,
+                        "stdout": "Solving N = 11\nSolutions: 2680\nSolution ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./nqueens -n 2 11",
+                "cputime": 2.337943,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 1.053623,
+                "ru_stime": 0.0,
+                "ru_utime": 2.337943,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./nqueens -n 2 11",
+                        "nthreads": 2,
+                        "realtime": 1.053623,
+                        "ru_nivcsw": 4,
+                        "ru_nvcsw": 21,
+                        "ru_stime": 0.0,
+                        "ru_utime": 2.337943,
+                        "stdout": "Solving N = 11\nSolutions: 2680\nSolution ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./nqueens -n 4 11",
+                "cputime": 8.706624,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 2.412413,
+                "ru_stime": 2.742684,
+                "ru_utime": 5.96394,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./nqueens -n 4 11",
+                        "nthreads": 4,
+                        "realtime": 2.412413,
+                        "ru_nivcsw": 5,
+                        "ru_nvcsw": 389264,
+                        "ru_stime": 2.742684,
+                        "ru_utime": 5.96394,
+                        "stdout": "Solving N = 11\nSolutions: 2680\nSolution ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./nqueens -n 8 11",
+                "cputime": 16.924666,
+                "nthreads": 8,
+                "passed": 1,
+                "realtime": 2.340569,
+                "ru_stime": 10.107301,
+                "ru_utime": 6.817365,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./nqueens -n 8 11",
+                        "nthreads": 8,
+                        "realtime": 2.340569,
+                        "ru_nivcsw": 17,
+                        "ru_nvcsw": 830795,
+                        "ru_stime": 10.107301,
+                        "ru_utime": 6.817365,
+                        "stdout": "Solving N = 11\nSolutions: 2680\nSolution ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./nqueens -n 16 11",
+                "cputime": 38.311758,
+                "nthreads": 16,
+                "passed": 1,
+                "realtime": 2.49751,
+                "ru_stime": 31.760687,
+                "ru_utime": 6.551071,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./nqueens -n 16 11",
+                        "nthreads": 16,
+                        "realtime": 2.49751,
+                        "ru_nivcsw": 27,
+                        "ru_nvcsw": 648578,
+                        "ru_stime": 31.760687,
+                        "ru_utime": 6.551071,
+                        "stdout": "Solving N = 11\nSolutions: 2680\nSolution ok.\n"
+                    }
+                ]
+            }
+        ],
+        "nqueens 12": [
+            {
+                "command": "timeout 60 ./nqueens -n 1 12",
+                "cputime": 14.987608,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 13.940978,
+                "ru_stime": 0.000479,
+                "ru_utime": 14.987129,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./nqueens -n 1 12",
+                        "nthreads": 1,
+                        "realtime": 13.940978,
+                        "ru_nivcsw": 11,
+                        "ru_nvcsw": 11,
+                        "ru_stime": 0.000479,
+                        "ru_utime": 14.987129,
+                        "stdout": "Solving N = 12\nSolutions: 14200\nSolution ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./nqueens -n 2 12",
+                "cputime": 15.991004,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 7.464487,
+                "ru_stime": 0.000289,
+                "ru_utime": 15.990715,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./nqueens -n 2 12",
+                        "nthreads": 2,
+                        "realtime": 7.464487,
+                        "ru_nivcsw": 12,
+                        "ru_nvcsw": 18,
+                        "ru_stime": 0.000289,
+                        "ru_utime": 15.990715,
+                        "stdout": "Solving N = 12\nSolutions: 14200\nSolution ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./nqueens -n 4 12",
+                "cputime": 16.774887,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 3.946175,
+                "ru_stime": 0.203629,
+                "ru_utime": 16.571258,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./nqueens -n 4 12",
+                        "nthreads": 4,
+                        "realtime": 3.946175,
+                        "ru_nivcsw": 16,
+                        "ru_nvcsw": 29965,
+                        "ru_stime": 0.203629,
+                        "ru_utime": 16.571258,
+                        "stdout": "Solving N = 12\nSolutions: 14200\nSolution ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./nqueens -n 8 12",
+                "cputime": 117.611662,
+                "nthreads": 8,
+                "passed": 1,
+                "realtime": 16.42265,
+                "ru_stime": 71.106154,
+                "ru_utime": 46.505508,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./nqueens -n 8 12",
+                        "nthreads": 8,
+                        "realtime": 16.42265,
+                        "ru_nivcsw": 66,
+                        "ru_nvcsw": 5639077,
+                        "ru_stime": 71.106154,
+                        "ru_utime": 46.505508,
+                        "stdout": "Solving N = 12\nSolutions: 14200\nSolution ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./nqueens -n 16 12",
+                "cputime": 253.295117,
+                "nthreads": 16,
+                "passed": 1,
+                "realtime": 16.512094,
+                "ru_stime": 209.112322,
+                "ru_utime": 44.182795,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./nqueens -n 16 12",
+                        "nthreads": 16,
+                        "realtime": 16.512094,
+                        "ru_nivcsw": 130,
+                        "ru_nvcsw": 4264038,
+                        "ru_stime": 209.112322,
+                        "ru_utime": 44.182795,
+                        "stdout": "Solving N = 12\nSolutions: 14200\nSolution ok.\n"
+                    }
+                ]
+            }
+        ],
+        "nqueens 13": [
+            {
+                "command": "timeout 60 ./nqueens -n 5 13",
+                "error": "        Program exited with non-zero exit status 124. \nProgram ran and most likely timed out at 60.002s\n        --------------------------------------------\n        Program output:\n        \n        StdErr output:\n        \n        ",
+                "nthreads": 5,
+                "passed": 0,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./nqueens -n 5 13",
+                        "error": "        Program exited with non-zero exit status 124. \nProgram ran and most likely timed out at 60.002s\n        --------------------------------------------\n        Program output:\n        \n        StdErr output:\n        \n        ",
+                        "nthreads": 5
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./nqueens -n 10 13",
+                "error": "        Program exited with non-zero exit status 124. \nProgram ran and most likely timed out at 60.002s\n        --------------------------------------------\n        Program output:\n        \n        StdErr output:\n        \n        ",
+                "nthreads": 10,
+                "passed": 0,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./nqueens -n 10 13",
+                        "error": "        Program exited with non-zero exit status 124. \nProgram ran and most likely timed out at 60.002s\n        --------------------------------------------\n        Program output:\n        \n        StdErr output:\n        \n        ",
+                        "nthreads": 10
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./nqueens -n 20 13",
+                "error": "        Program exited with non-zero exit status 124. \nProgram ran and most likely timed out at 60.002s\n        --------------------------------------------\n        Program output:\n        \n        StdErr output:\n        \n        ",
+                "nthreads": 20,
+                "passed": 0,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./nqueens -n 20 13",
+                        "error": "        Program exited with non-zero exit status 124. \nProgram ran and most likely timed out at 60.002s\n        --------------------------------------------\n        Program output:\n        \n        StdErr output:\n        \n        ",
+                        "nthreads": 20
+                    }
+                ]
+            }
+        ]
+    },
+    "psum": {
+        "psum_test large": [
+            {
+                "command": "timeout 60 ./psum_test -n 4 1000000000",
+                "cputime": 40.730962000000005,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 11.194158,
+                "ru_stime": 12.630229,
+                "ru_utime": 28.100733,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./psum_test -n 4 1000000000",
+                        "nthreads": 4,
+                        "realtime": 11.194158,
+                        "ru_nivcsw": 39,
+                        "ru_nvcsw": 1709432,
+                        "ru_stime": 12.630229,
+                        "ru_utime": 28.100733,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./psum_test -n 8 1000000000",
+                "cputime": 64.138678,
+                "nthreads": 8,
+                "passed": 1,
+                "realtime": 8.911122,
+                "ru_stime": 37.994887,
+                "ru_utime": 26.143791,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./psum_test -n 8 1000000000",
+                        "nthreads": 8,
+                        "realtime": 8.911122,
+                        "ru_nivcsw": 28,
+                        "ru_nvcsw": 3297519,
+                        "ru_stime": 37.994887,
+                        "ru_utime": 26.143791,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./psum_test -n 16 1000000000",
+                "cputime": 130.349005,
+                "nthreads": 16,
+                "passed": 1,
+                "realtime": 8.500996,
+                "ru_stime": 107.587955,
+                "ru_utime": 22.76105,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./psum_test -n 16 1000000000",
+                        "nthreads": 16,
+                        "realtime": 8.500996,
+                        "ru_nivcsw": 72,
+                        "ru_nvcsw": 2239191,
+                        "ru_stime": 107.587955,
+                        "ru_utime": 22.76105,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            }
+        ],
+        "psum_test medium": [
+            {
+                "command": "timeout 15 ./psum_test -n 1 100000000",
+                "cputime": 0.5902270000000001,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 0.302371,
+                "ru_stime": 5.8e-05,
+                "ru_utime": 0.590169,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./psum_test -n 1 100000000",
+                        "nthreads": 1,
+                        "realtime": 0.302371,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 7,
+                        "ru_stime": 5.8e-05,
+                        "ru_utime": 0.590169,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./psum_test -n 2 100000000",
+                "cputime": 2.99651,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 1.497102,
+                "ru_stime": 0.046702,
+                "ru_utime": 2.949808,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./psum_test -n 2 100000000",
+                        "nthreads": 2,
+                        "realtime": 1.497102,
+                        "ru_nivcsw": 2,
+                        "ru_nvcsw": 5,
+                        "ru_stime": 0.046702,
+                        "ru_utime": 2.949808,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./psum_test -n 4 100000000",
+                "cputime": 3.4479240000000004,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 0.96956,
+                "ru_stime": 1.02654,
+                "ru_utime": 2.421384,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./psum_test -n 4 100000000",
+                        "nthreads": 4,
+                        "realtime": 0.96956,
+                        "ru_nivcsw": 2,
+                        "ru_nvcsw": 197653,
+                        "ru_stime": 1.02654,
+                        "ru_utime": 2.421384,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./psum_test -n 8 100000000",
+                "cputime": 4.334835,
+                "nthreads": 8,
+                "passed": 1,
+                "realtime": 0.60723,
+                "ru_stime": 2.562474,
+                "ru_utime": 1.772361,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./psum_test -n 8 100000000",
+                        "nthreads": 8,
+                        "realtime": 0.60723,
+                        "ru_nivcsw": 9,
+                        "ru_nvcsw": 209118,
+                        "ru_stime": 2.562474,
+                        "ru_utime": 1.772361,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./psum_test -n 16 100000000",
+                "cputime": 10.029395999999998,
+                "nthreads": 16,
+                "passed": 1,
+                "realtime": 0.655641,
+                "ru_stime": 8.265462,
+                "ru_utime": 1.763934,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./psum_test -n 16 100000000",
+                        "nthreads": 16,
+                        "realtime": 0.655641,
+                        "ru_nivcsw": 9,
+                        "ru_nvcsw": 178301,
+                        "ru_stime": 8.265462,
+                        "ru_utime": 1.763934,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            }
+        ],
+        "psum_test small": [
+            {
+                "command": "timeout 15 ./psum_test -n 1 10000000",
+                "cputime": 0.077006,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 0.044652,
+                "ru_stime": 3.2e-05,
+                "ru_utime": 0.076974,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./psum_test -n 1 10000000",
+                        "nthreads": 1,
+                        "realtime": 0.044652,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 2,
+                        "ru_stime": 3.2e-05,
+                        "ru_utime": 0.076974,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./psum_test -n 2 10000000",
+                "cputime": 0.10102000000000001,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 0.041881,
+                "ru_stime": 0.001408,
+                "ru_utime": 0.099612,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./psum_test -n 2 10000000",
+                        "nthreads": 2,
+                        "realtime": 0.041881,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 15,
+                        "ru_stime": 0.001408,
+                        "ru_utime": 0.099612,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./psum_test -n 4 10000000",
+                "cputime": 0.33343100000000003,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 0.09438,
+                "ru_stime": 0.111561,
+                "ru_utime": 0.22187,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./psum_test -n 4 10000000",
+                        "nthreads": 4,
+                        "realtime": 0.09438,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 17408,
+                        "ru_stime": 0.111561,
+                        "ru_utime": 0.22187,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./psum_test -n 8 10000000",
+                "cputime": 0.535208,
+                "nthreads": 8,
+                "passed": 1,
+                "realtime": 0.075179,
+                "ru_stime": 0.294412,
+                "ru_utime": 0.240796,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./psum_test -n 8 10000000",
+                        "nthreads": 8,
+                        "realtime": 0.075179,
+                        "ru_nivcsw": 1,
+                        "ru_nvcsw": 27241,
+                        "ru_stime": 0.294412,
+                        "ru_utime": 0.240796,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./psum_test -n 16 10000000",
+                "cputime": 1.293087,
+                "nthreads": 16,
+                "passed": 1,
+                "realtime": 0.084479,
+                "ru_stime": 1.056068,
+                "ru_utime": 0.237019,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./psum_test -n 16 10000000",
+                        "nthreads": 16,
+                        "realtime": 0.084479,
+                        "ru_nivcsw": 6,
+                        "ru_nvcsw": 22654,
+                        "ru_stime": 1.056068,
+                        "ru_utime": 0.237019,
+                        "stdout": "starting...\nresult ok.\n"
+                    }
+                ]
+            }
+        ]
+    },
+    "quicksort": {
+        "quicksort large": [
+            {
+                "command": "timeout 60 ./quicksort -n 5 -s 43 -d 16 200000000",
+                "cputime": 217.08443,
+                "nthreads": 5,
+                "passed": 1,
+                "realtime": 47.121479,
+                "ru_stime": 78.271331,
+                "ru_utime": 138.813099,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./quicksort -n 5 -s 43 -d 16 200000000",
+                        "nthreads": 5,
+                        "realtime": 47.121479,
+                        "ru_nivcsw": 134,
+                        "ru_nvcsw": 9664804,
+                        "ru_stime": 78.271331,
+                        "ru_utime": 138.813099,
+                        "stdout": "Using 5 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 138.813099s\nsystem time: 78.271331s\nreal time: 47.121479s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./quicksort -n 10 -s 43 -d 16 200000000",
+                "cputime": 472.064557,
+                "nthreads": 10,
+                "passed": 1,
+                "realtime": 50.572807,
+                "ru_stime": 316.230551,
+                "ru_utime": 155.834006,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./quicksort -n 10 -s 43 -d 16 200000000",
+                        "nthreads": 10,
+                        "realtime": 50.572807,
+                        "ru_nivcsw": 188,
+                        "ru_nvcsw": 14562503,
+                        "ru_stime": 316.230551,
+                        "ru_utime": 155.834006,
+                        "stdout": "Using 10 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 155.834006s\nsystem time: 316.230551s\nreal time: 50.572807s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 60 ./quicksort -n 20 -s 43 -d 16 200000000",
+                "cputime": 1005.29148,
+                "nthreads": 20,
+                "passed": 1,
+                "realtime": 51.625977,
+                "ru_stime": 852.664601,
+                "ru_utime": 152.626879,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 60 ./quicksort -n 20 -s 43 -d 16 200000000",
+                        "nthreads": 20,
+                        "realtime": 51.625977,
+                        "ru_nivcsw": 419,
+                        "ru_nvcsw": 11693345,
+                        "ru_stime": 852.664601,
+                        "ru_utime": 152.626879,
+                        "stdout": "Using 20 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 152.626879s\nsystem time: 852.664601s\nreal time: 51.625977s\n"
+                    }
+                ]
+            }
+        ],
+        "quicksort medium": [
+            {
+                "command": "timeout 15 ./quicksort -n 1 -s 43 -d 16 20000000",
+                "cputime": 5.589531,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 4.748272,
+                "ru_stime": 0.017046,
+                "ru_utime": 5.572485,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./quicksort -n 1 -s 43 -d 16 20000000",
+                        "nthreads": 1,
+                        "realtime": 4.748272,
+                        "ru_nivcsw": 7,
+                        "ru_nvcsw": 2,
+                        "ru_stime": 0.017046,
+                        "ru_utime": 5.572485,
+                        "stdout": "Using 1 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 5.572485s\nsystem time: 0.017046s\nreal time: 4.748272s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./quicksort -n 2 -s 43 -d 16 20000000",
+                "cputime": 9.785493,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 4.7126,
+                "ru_stime": 0.111115,
+                "ru_utime": 9.674378,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./quicksort -n 2 -s 43 -d 16 20000000",
+                        "nthreads": 2,
+                        "realtime": 4.7126,
+                        "ru_nivcsw": 14,
+                        "ru_nvcsw": 9202,
+                        "ru_stime": 0.111115,
+                        "ru_utime": 9.674378,
+                        "stdout": "Using 2 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 9.674378s\nsystem time: 0.111115s\nreal time: 4.712600s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./quicksort -n 4 -s 43 -d 16 20000000",
+                "cputime": 17.470184,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 4.716317,
+                "ru_stime": 5.373696,
+                "ru_utime": 12.096488,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./quicksort -n 4 -s 43 -d 16 20000000",
+                        "nthreads": 4,
+                        "realtime": 4.716317,
+                        "ru_nivcsw": 21,
+                        "ru_nvcsw": 684592,
+                        "ru_stime": 5.373696,
+                        "ru_utime": 12.096488,
+                        "stdout": "Using 4 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 12.096488s\nsystem time: 5.373696s\nreal time: 4.716317s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./quicksort -n 8 -s 43 -d 16 20000000",
+                "cputime": 36.859683000000004,
+                "nthreads": 8,
+                "passed": 1,
+                "realtime": 5.090192,
+                "ru_stime": 21.917988,
+                "ru_utime": 14.941695,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./quicksort -n 8 -s 43 -d 16 20000000",
+                        "nthreads": 8,
+                        "realtime": 5.090192,
+                        "ru_nivcsw": 31,
+                        "ru_nvcsw": 1624683,
+                        "ru_stime": 21.917988,
+                        "ru_utime": 14.941695,
+                        "stdout": "Using 8 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 14.941695s\nsystem time: 21.917988s\nreal time: 5.090192s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./quicksort -n 16 -s 43 -d 16 20000000",
+                "cputime": 80.492897,
+                "nthreads": 16,
+                "passed": 1,
+                "realtime": 5.22385,
+                "ru_stime": 65.761717,
+                "ru_utime": 14.73118,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./quicksort -n 16 -s 43 -d 16 20000000",
+                        "nthreads": 16,
+                        "realtime": 5.22385,
+                        "ru_nivcsw": 73,
+                        "ru_nvcsw": 1269661,
+                        "ru_stime": 65.761717,
+                        "ru_utime": 14.73118,
+                        "stdout": "Using 16 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 14.731180s\nsystem time: 65.761717s\nreal time: 5.223850s\n"
+                    }
+                ]
+            }
+        ],
+        "quicksort small": [
+            {
+                "command": "timeout 15 ./quicksort -n 1 -s 43 -d 16 2000000",
+                "cputime": 0.5025639999999999,
+                "nthreads": 1,
+                "passed": 1,
+                "realtime": 0.253919,
+                "ru_stime": 0.000172,
+                "ru_utime": 0.502392,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./quicksort -n 1 -s 43 -d 16 2000000",
+                        "nthreads": 1,
+                        "realtime": 0.253919,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 2,
+                        "ru_stime": 0.000172,
+                        "ru_utime": 0.502392,
+                        "stdout": "Using 1 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 0.502392s\nsystem time: 0.000172s\nreal time: 0.253919s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./quicksort -n 2 -s 43 -d 16 2000000",
+                "cputime": 0.585096,
+                "nthreads": 2,
+                "passed": 1,
+                "realtime": 0.229991,
+                "ru_stime": 0.002813,
+                "ru_utime": 0.582283,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./quicksort -n 2 -s 43 -d 16 2000000",
+                        "nthreads": 2,
+                        "realtime": 0.229991,
+                        "ru_nivcsw": 0,
+                        "ru_nvcsw": 682,
+                        "ru_stime": 0.002813,
+                        "ru_utime": 0.582283,
+                        "stdout": "Using 2 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 0.582283s\nsystem time: 0.002813s\nreal time: 0.229991s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./quicksort -n 4 -s 43 -d 16 2000000",
+                "cputime": 0.90303,
+                "nthreads": 4,
+                "passed": 1,
+                "realtime": 0.223457,
+                "ru_stime": 0.129742,
+                "ru_utime": 0.773288,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./quicksort -n 4 -s 43 -d 16 2000000",
+                        "nthreads": 4,
+                        "realtime": 0.223457,
+                        "ru_nivcsw": 5,
+                        "ru_nvcsw": 17001,
+                        "ru_stime": 0.129742,
+                        "ru_utime": 0.773288,
+                        "stdout": "Using 4 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 0.773288s\nsystem time: 0.129742s\nreal time: 0.223457s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./quicksort -n 8 -s 43 -d 16 2000000",
+                "cputime": 1.751517,
+                "nthreads": 8,
+                "passed": 1,
+                "realtime": 0.233588,
+                "ru_stime": 0.800274,
+                "ru_utime": 0.951243,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./quicksort -n 8 -s 43 -d 16 2000000",
+                        "nthreads": 8,
+                        "realtime": 0.233588,
+                        "ru_nivcsw": 2,
+                        "ru_nvcsw": 73575,
+                        "ru_stime": 0.800274,
+                        "ru_utime": 0.951243,
+                        "stdout": "Using 8 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 0.951243s\nsystem time: 0.800274s\nreal time: 0.233588s\n"
+                    }
+                ]
+            },
+            {
+                "command": "timeout 15 ./quicksort -n 16 -s 43 -d 16 2000000",
+                "cputime": 3.645885,
+                "nthreads": 16,
+                "passed": 1,
+                "realtime": 0.235572,
+                "ru_stime": 2.659302,
+                "ru_utime": 0.986583,
+                "run_count": 1,
+                "runs": [
+                    {
+                        "command": "timeout 15 ./quicksort -n 16 -s 43 -d 16 2000000",
+                        "nthreads": 16,
+                        "realtime": 0.235572,
+                        "ru_nivcsw": 2,
+                        "ru_nvcsw": 62217,
+                        "ru_stime": 2.659302,
+                        "ru_utime": 0.986583,
+                        "stdout": "Using 16 threads, recursive parallel depth=16\nqsort parallel result ok. Timings follow\nuser time: 0.986583s\nsystem time: 2.659302s\nreal time: 0.235572s\n"
+                    }
+                ]
+            }
+        ]
+    }
+}
