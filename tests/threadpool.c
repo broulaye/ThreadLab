@@ -326,7 +326,7 @@ void * future_get(struct future *f) {
         	run_future(f);
         	return f->result;
 	}
-	else {
+	else { // Helping code
 	    	if(f->threadRunningF == 0) {
             		pthread_mutex_unlock(&f->pool->globalQueueLock);
 			while (f->futureState != DONE) {
